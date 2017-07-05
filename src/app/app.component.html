@@ -1,7 +1,27 @@
 
 
 
-<div class="main">
-  App Works!
+<div id="container" [@listAnimation]="items.length">
+
+  <button (click)="pushItem()">Add item</button>
+  <button (click)="removeItem()">Remove item</button>
+
+  <div id="list" *ngFor="let item of items">
+    {{ item }}
+  </div>
+
+  <div @explainerAnim>
+    <div class="col">
+      <p>This is so much fun playing with animaations</p>
+    </div>
+    <div class="col">
+      <p>How did we survive before Angular 4 animations?</p>
+    </div>
+    <div class="col">
+      <p>Oh yeah, maybe some good ole jQuery!</p>
+    </div>
+    <div>
+    </div>
+
 </div>
 
